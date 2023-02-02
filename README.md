@@ -1,1 +1,1 @@
-# Projects
+Here are collected homework solutions for learning C++.
