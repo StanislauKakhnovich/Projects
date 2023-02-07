@@ -37,7 +37,8 @@ int main()
 	cout << "The smallest among the introduced " << min_number << 'm' << '\n';
 	cout << "The largest among the introduced " << max_number << 'm' << '\n';
 	cout << "The number of entered values " << i << '\n';
-	
+
+	sort(distances);
 	for(double length:distances) cout << length << 'm' << '\n';
 	
 	
