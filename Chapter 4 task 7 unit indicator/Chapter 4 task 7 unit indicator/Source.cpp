@@ -34,12 +34,11 @@ int main()
 		else cout << "You entered the wrong unit of measure.\n";
 
 	}
-	cout << "The smallest among the introduced " << min_number << 'm' << '\n';
-	cout << "The largest among the introduced " << max_number << 'm' << '\n';
-	cout << "The number of entered values " << i << '\n';
-
 	sort(distances);
-	for(double length:distances) cout << length << 'm' << '\n';
+	cout << "The smallest among the introduced " << distances[0] << 'm' << '\n';
+	cout << "The largest among the introduced " << distances[distances.size()-1] << 'm' << '\n';
+	cout << "The number of entered values " << i << '\n';
+	for(double length:distances) cout<<"Length = " << length << 'm' << '\n';
 	
 	
 }

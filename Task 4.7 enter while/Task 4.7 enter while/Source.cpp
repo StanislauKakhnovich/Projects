@@ -4,7 +4,8 @@ int main()
 	cout << "Please enter two numbers.\n";
 	double enter_number = 0;
 	vector<double> numbers;
-	while (cin >> enter_number && numbers.size()<3)
+	//while (cin >> enter_number && numbers.size()<3)
+	while (cin >> enter_number)
 		numbers.push_back(enter_number);
 	double control = (numbers[0] - numbers[1]) * (numbers[0] - numbers[1]);
 	if (control <(1.0/100)*(1.0 / 100) && control!=0) cout << "The numbers are almost equal.\n";
