@@ -36,7 +36,7 @@ int input_recognition(string digit)
 
 int main()
 {
-	cout << "Enter a number from 0 to 9 as a word.\n";
+	cout << "Enter a number from 0 to 9 as a word or digit.\n";
 	string digit;
 	cin >> digit;
 	cout << "You entered the number " << input_recognition(digit) << ".\n";
