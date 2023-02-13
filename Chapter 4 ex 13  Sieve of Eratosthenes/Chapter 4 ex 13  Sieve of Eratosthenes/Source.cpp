@@ -2,10 +2,12 @@
 
 int main()
 {
-
+	cout << "Enter the maximum number.\n";
+	int max_num = 0;
+	cin >> max_num;
 	vector<int> etalon;
 	vector<int> sieve;
-	for (int i = 2; i <= 100; ++i) {
+	for (int i = 2; i <= max_num; ++i) {
 		etalon.push_back(i);
 		sieve.push_back(i);
 	}
