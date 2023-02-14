@@ -1,22 +1,52 @@
 #include "..\..\std_lib_facilities.h"
 int main()
 {
-	vector<string> comps = { "stone", "paper", "scissors" };
+	vector<string> answers = { "stone", "paper", "scissors" };
 	string user = "?";
-	int comp = 0;
+	int comp_index = 0;
 	while (true) {
 		cout << "Enter stone, paper or scissors.\n";
 		cin >> user;
-		cout << "The computer threw out " << comps[comp]<<".\n";
-		if (user == comps[comp]) cout << "Draw.\n";
-		else if (user == "stone" && comps[comp] == "paper") cout << "The computer won.\n";
-		else if (user == "stone" && comps[comp] == "scissors") cout << "You have won.\n";
-		else if (user == "paper" && comps[comp] == "stone") cout << "You have won.\n";
-		else if (user == "paper" && comps[comp] == "scissors") cout << "The computer won.\n";
-		else if (user == "scissors" && comps[comp] == "stone") cout << "The computer won.\n";
-		else if (user == "scissors" && comps[comp] == "paper") cout << "You have won.\n";
-		++comp;
-		if (comp == 3) comp = 0;
+		int user_index = 0;
+		for (int i = 0; i < 3; ++i) if (answers[i] == user) user_index = i;
+		cout << "The computer threw out " << answers[comp_index]<<".\n";
+		switch (user_index) {
+			case 0: {
+				switch (comp_index) {
+				case 0: cout << "Draw.\n";
+					break;
+				case 1: cout << "The computer won.\n";
+					break;
+				case 2: cout << "You have won.\n";
+					break;
+				}
+				break;
+			}
+			case 1: {
+				switch (comp_index) {
+				case 0: cout << "You have won.\n";
+					break;
+				case 1: cout << "Draw.\n";
+					break;
+				case 2: cout << "The computer won.\n";
+					break;
+				}
+				break;
+			}
+			case 2: {
+				switch (comp_index) {
+				case 0: cout << "The computer won.\n";
+					break;
+				case 1: cout << "You have won.\n";
+					break;
+				case 2: cout << "Draw.\n";
+					break;
+				}
+				break;
+			}
+		}
+		++comp_index;
+		if (comp_index == 3) comp_index = 0;
 		if (user == "|") break;
 	}
 
