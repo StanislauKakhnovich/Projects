@@ -1,1 +1,1 @@
-Here are collected homework solutions for learning C++.
+Here are my exercises for learning C++. Textbook: Programming Principles and Practice Using Ñ++. Second edition. Bjarne Stroustruð.
