@@ -3,8 +3,7 @@
 int main()
 {
 	try {
-		bool c = true;
-		if (c) cout << "Success ! \n"; else cout << "Fail ! \n";
+		cout << "Success!\n";
 		keep_window_open();
 		return 0;
 	}
