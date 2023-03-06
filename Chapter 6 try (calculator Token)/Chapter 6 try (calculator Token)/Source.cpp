@@ -63,8 +63,8 @@ Token Token_stream::get()
     cin >> ch;
 
     switch (ch) {
-    case ';':       // for "print"
-    case 'q':       // for "quit"
+    case '=':       // for "print"
+    case 'x':       // for "quit"
     case '(':
     case ')':
     case '+':
@@ -132,8 +132,8 @@ try {
     double val = 0;
     while (cin) {
         Token t = ts.get();
-        if (t.kind == 'q') break;
-        if (t.kind == ';')
+        if (t.kind == 'x') break;
+        if (t.kind == '=')
             cout << "=" << val << '\n';
         else
             ts.putback(t);
